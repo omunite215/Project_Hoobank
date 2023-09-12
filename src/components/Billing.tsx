@@ -13,6 +13,7 @@ const Billing = () => (
           src={bill}
           alt="billing"
           className="w-[100%] h-[100%] relative z-[5]"
+          loading="lazy"
         />
       </Zoom>
 
@@ -36,11 +37,13 @@ const Billing = () => (
             src={apple}
             alt="apple-store"
             className="w-[128px] h-[42px] object-contain mr-5 cursor-pointer"
+            loading="lazy"
           />
           <img
             src={google}
             alt="google-play"
             className="w-[128px] h-[42px] object-contain mr-5 cursor-pointer"
+            loading="lazy"
           />
         </div>
       </Slide>

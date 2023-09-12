@@ -16,7 +16,7 @@ const FeatureCard = ({ icon, title, content, index }: featureCardProps) => (
     } feature-card`}
   >
     <div className="w-[64px] h-[64px] rounded-full flex justify-center items-center bg-dimBlue">
-      <img src={icon} alt="icon" className="w-[50%] h-[50%] object-contain" />
+      <img src={icon} alt="icon" className="w-[50%] h-[50%] object-contain" loading="lazy"/>
     </div>
     <div className="flex-1 flex flex-col ml-3">
       <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1">

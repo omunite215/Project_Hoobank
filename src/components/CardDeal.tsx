@@ -19,7 +19,7 @@ const CardDeal = () => (
     </div>
     <div className="flex-1 flex justify-center items-center md:ml-10 ml-0 md:mt-0 mt-10 relative">
       <Zoom>
-        <img src={card} alt="card-img" className="w-[100%] h-[100%]" />
+        <img src={card} alt="card-img" className="w-[100%] h-[100%]" loading="lazy" />
       </Zoom>
     </div>
   </section>

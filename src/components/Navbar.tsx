@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <Fade direction="down">
       <nav className="w-full flex py-6 justify-between items-center navbar">
-        <img src={logo} alt="hoobank" className=" h-[32px] w-[124px]" />
+        <img src={logo} alt="hoobank" className=" h-[32px] w-[124px]" loading="lazy"/>
         <Fade direction={"down"} cascade delay={1e3} damping={1e-2}>
           <ul className="list-none sm:flex hidden justify-end items-center flex-1">
             {navLinks.map((nav, index) => (
@@ -34,6 +34,7 @@ const Navbar = () => {
             alt="menu"
             className=" h-[28px] w-[28px] object-contain"
             onClick={() => settoggle((prev) => !prev)}
+            loading="lazy"
           />
           <div
             className={`${

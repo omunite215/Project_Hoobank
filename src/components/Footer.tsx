@@ -11,6 +11,7 @@ const Footer = () => (
             src={logo}
             alt="hoobank"
             className=" h-[72.14px] w-[266px] object-contain"
+            loading="lazy"
           />
           <p className="font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px] mt-4 max-w-[312px]">
             A new way to make the payments easy, reliable and secure.
@@ -54,6 +55,7 @@ const Footer = () => (
               className={` h-[21px] w-[21px] object-contain cursor-pointer hover:text-secondary ${
                 index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
               }`}
+              loading="lazy"
               onClick={() => window.open(social.link)}
             />
           ))}

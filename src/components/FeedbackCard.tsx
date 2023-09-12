@@ -13,12 +13,13 @@ const FeedBackCard = ({ content, name, title, img }: feedbackCardPropTypes) => (
       src={quotes}
       alt="quotes"
       className="h-[27px] w-[42px] object-contain"
+      loading="lazy"
     />
     <p className="font-poppins font-normal text-[18px] leading-[32px] text-white my-10">
       {content}
     </p>
     <div className="flex flex-row">
-      <img src={img} alt={name} className=" h-[48px] w-[48px] rounded-full" />
+      <img src={img} alt={name} className=" h-[48px] w-[48px] rounded-full" loading="lazy" />
       <div className="flex flex-col ml-4">
         <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-white">
           {name}
