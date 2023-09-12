@@ -73,7 +73,6 @@ The website should now be up and running on http://localhost:3000.
 [![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,react)](https://skillicons.dev)
 
 ## 🚀 About Me
-Front - End Web Development Enthusiast
 Specializations:
 - UI/UX Design.
 - Web Development
