@@ -21,7 +21,7 @@ This was my first project using Vite. Initially made using tutorial of [JavaScip
   </a>
 </p>
 
-A website which is a product page of a Bank displaying its products features, clients , feddbacks and many more.
+A website which is a product page of a Bank displaying its products features, clients , feedbacks and many more.
 
 ### The project is hosted on Netlify : [Hoobank](https://hoobankbyom.netlify.app/)
 
