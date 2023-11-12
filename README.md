@@ -3,13 +3,8 @@
 ![Screenshot 2023-08-11 213008](https://github.com/omunite215/Hoobank/assets/78680563/e33352b1-ff79-49e7-a9e1-4eaf995ce2c6)
 
 
-## ⏰ Major Updates made on 12/09/2023:
-- Migrated from JavaScript to TypeScript.
-- Optimized Code.
-- Lazy Loading Images.
-- Added Fluid Animations.
 
-This was my first project using Vite. Initially made using tutorial of [JavaScipt Mastery](https://youtu.be/_oO4Qi5aVZs?si=uIWyu_1FoElOJueH).
+This was my first project using Vite. Initially made using tutorial of [JavaScipt Mastery](https://youtu.be/_oO4Qi5aVZs?si=uIWyu_1FoElOJueH). Now it is made on next js using typescript.
 
 ### Link to Figma File:
 
@@ -66,11 +61,11 @@ The website should now be up and running on http://localhost:3000.
 
 ## 🏠 Built With:
 
-[![My Skills](https://skillicons.dev/icons?i=react,tailwind,vite,netlify)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind,nextjs,netlify)](https://skillicons.dev)
 
 ## 🛠 Skills
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,react)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs)](https://skillicons.dev)
 
 ## 🚀 About Me
 Specializations:

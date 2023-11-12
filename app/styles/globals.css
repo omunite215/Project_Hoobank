@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -136,4 +134,54 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+@layer utilities {
+  /* Styles */
+  .boxWidth {
+    @apply xl:max-w-[1280px] w-full;
+  }
+  .heading2 {
+    @apply font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full;
+  }
+  .paragraph {
+    @apply font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px];
+  }
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+  .flexStart {
+    @apply flex justify-center items-start;
+  }
+  .paddingX {
+    @apply sm:px-16 px-6;
+  }
+  .paddingY {
+    @apply sm:py-16 py-6;
+  }
+  .padding{
+    @apply sm:px-16 px-6 sm:py-12 py-4;
+  }
+  .marginX {
+    @apply sm:mx-16 mx-6;
+  }
+  .marginY {
+    @apply sm:my-16 my-6;
+  }
+  /* Layout */
+  .section {
+    @apply flex md:flex-row flex-col paddingY;
+  }
+  .sectionReverse {
+    @apply flex md:flex-row flex-col-reverse paddingY;
+  }
+  .sectionImgReverse {
+    @apply flex-1 flex flexCenter md:mr-10 mr-0 md:mt-0 mt-10 relative;
+  }
+  .sectionImg {
+    @apply flex-1 flex flexCenter md:ml-10 ml-0 md:mt-0 mt-10 relative;
+  }
+  .sectionInfo {
+    @apply flex-1 flexStart flex-col;
+  }
 }

@@ -2,8 +2,8 @@ import {
   Navbar,
   Hero,
   Stats,
-  Business,
   Billing,
+  Business,
   CardDeal,
   Testimonials,
   Clients,
@@ -11,14 +11,14 @@ import {
   Footer,
 } from "./components";
 
-function App() {
+export default function Home() {
   return (
-    <div className=" bg-primary w-full overflow-hidden">
-      <div className="sm:px-16 px-6 flex justify-center items-center">
-        <div className="xl:max-w-[1280px] w-full">
+    <main className=" bg-primary w-full overflow-hidden font-poppins">
+      <header className="sm:px-16 px-6 flex justify-center items-center">
+        <nav className="xl:max-w-[1280px] w-full">
           <Navbar />
-        </div>
-      </div>
+        </nav>
+      </header>
       <div className=" bg-primary flex justify-center items-start">
         <div className="xl:max-w-[1280px] w-full">
           <Hero />
@@ -36,8 +36,6 @@ function App() {
           <Footer />
         </div>
       </div>
-    </div>
+    </main>
   );
 }
-
-export default App;
