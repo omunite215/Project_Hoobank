@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn, slideIn } from "../styles/animations";
 import { features } from "../constants";
 import Button from "./Button";
 
@@ -38,7 +41,12 @@ const FeatureCard = ({ icon, title, content, index }: featureCardProps) => (
 
 const Business = () => (
   <section id="features" className="section">
-    <div className="sectionInfo">
+    <motion.div
+      className="sectionInfo"
+      variants={slideIn("left", "tween", 0.2, 1.5)}
+      initial="hidden"
+      animate="show"
+    >
       <h2 className="heading2">
         You do the business, <br className="sm:block hidden" /> we’ll handle the
         money.
@@ -50,11 +58,18 @@ const Business = () => (
       </p>
 
       <Button styles={`mt-10`} />
-    </div>
+    </motion.div>
 
     <div className="sectionImg flex-col">
       {features.map((feature, index) => (
-        <FeatureCard key={feature.id} {...feature} index={index} />
+        <motion.div
+          key={feature.id}
+          variants={fadeIn("left", "spring", index * 0.5, 1)}
+          initial="hidden"
+          animate="show"
+        >
+          <FeatureCard key={feature.id} {...feature} index={index} />
+        </motion.div>
       ))}
     </div>
   </section>

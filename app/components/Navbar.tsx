@@ -1,30 +1,20 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { navVariants } from "../styles/animations";
 import Image from "next/image";
 import { close, logo, menu } from "../../public";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
-  const [active, setActive] = useState<String>("Home");
-  const [toggle, setToggle] = useState<Boolean>(false);
-  const handleNavLinkClick = (navTitle: string) => {
-    setActive(navTitle);
-    setToggle(false);
-  };
+  const [active, setActive] = useState("Home");
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <motion.nav
-      className="w-full flex py-6 justify-between items-center navbar"
-      variants={navVariants}
-      initial="hidden"
-      animate="visible"
-    >
+    <motion.nav className="w-full flex py-6 justify-between items-center navbar" variants={navVariants} initial="hidden" animate="show">
       <Image src={logo} alt="hoobank" width={124} height={32} loading="eager" />
 
-      <motion.ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
@@ -33,10 +23,10 @@ const Navbar = () => {
             } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
             onClick={() => setActive(nav.title)}
           >
-            <Link href={`#${nav.id}`}>{nav.title}</Link>
+            <a href={`#${nav.id}`}>{nav.title}</a>
           </li>
         ))}
-      </motion.ul>
+      </ul>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
         <Image
@@ -46,24 +36,22 @@ const Navbar = () => {
           height={28}
           loading="eager"
           className="object-contain"
-          onTouchStart={() => setToggle(!toggle)}
-          onMouseDown={() => setToggle(!toggle)}
+          onClick={() => setToggle(!toggle)}
         />
 
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-50`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] hover:text-secondary ${
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${
                   active === nav.title ? "text-secondary" : "text-white"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                onTouchStart={() => handleNavLinkClick(nav.title)}
-                onMouseDown={() => handleNavLinkClick(nav.title)}
+                onClick={() => setActive(nav.title)}
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>

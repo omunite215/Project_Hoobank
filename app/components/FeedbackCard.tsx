@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+import { zoomIn } from "../styles/animations";
 import { quotes } from "../../public";
 import Image from "next/image";
 
@@ -9,7 +12,7 @@ interface feedbackCardPropTypes {
 }
 
 const FeedBackCard = ({ content, name, title, img }: feedbackCardPropTypes) => (
-  <div className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card">
+  <motion.div className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card" variants={zoomIn} initial="hidden" animate="show">
     <Image
       src={quotes}
       alt="quotes"
@@ -32,7 +35,7 @@ const FeedBackCard = ({ content, name, title, img }: feedbackCardPropTypes) => (
         </p>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
 
 export default FeedBackCard;

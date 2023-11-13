@@ -1,10 +1,18 @@
+"use client";
+import { motion } from "framer-motion";
 import { card } from "../../public";
+import { slideIn } from "../styles/animations";
 import Button from "./Button";
 import Image from "next/image";
 
 const CardDeal = () => (
   <section className="section">
-    <div className="sectionInfo">
+    <motion.div
+      className="sectionInfo"
+      variants={slideIn("right", "tween", 0.2, 1.5)}
+      initial="hidden"
+      animate="show"
+    >
       <h2 className="heading2">
         Find a better card deal <br className="sm:block hidden" /> in few easy
         steps.
@@ -15,9 +23,14 @@ const CardDeal = () => (
       </p>
 
       <Button styles={`mt-10`} />
-    </div>
+    </motion.div>
 
-    <div className="sectionImg">
+    <motion.div
+      className="sectionImg"
+      variants={slideIn("left", "tween", 0.2, 1.5)}
+      initial="hidden"
+      animate="show"
+    >
       <Image
         src={card}
         width={0}
@@ -25,7 +38,7 @@ const CardDeal = () => (
         alt="billing"
         className="w-[100%] h-[100%]"
       />
-    </div>
+    </motion.div>
   </section>
 );
 

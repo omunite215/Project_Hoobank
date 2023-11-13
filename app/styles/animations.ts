@@ -1,50 +1,83 @@
 export const navVariants = {
-    hidden: {
-      opacity: 0,
-      y: -50,
-      transition: {
-        type: 'spring',
-        stiffness: 300,
-        damping: 140,
-      },
+  hidden: {
+    opacity: 0,
+    y: -50,
+    transition: {
+      type: "spring",
+      damping: 140,
     },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 80,
-        delay: 1,
-      },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      delay: 1.5,
     },
-  };
+  },
+};
 
-  interface SlideInAnimationProps {
-    direction: 'left' | 'right' | 'up' | 'down';
-    type: string;
-    delay: number;
-    duration: number;
-  }
-  
-  export const slideIn = (direction?:any, type?:any, delay?:any, duration?:any) => ({
-    hidden: {
-      x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
-      y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
+export const zoomIn = {
+  hidden: {
+    opacity: 0,
+    scale: 0.5,
+    transition: {
+      type: "spring",
+      delay: 0.5,
     },
-    visible: {
-      x: 0,
-      y: 0,
-      transition: {
-        type,
-        delay,
-        duration,
-        ease: 'easeOut',
-      },
+  },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: "spring",
+      delay: 0.5,
     },
-  });
-  
-  
-  
-  
-  
-  
+  },
+};
+
+export const fadeIn = (
+  direction: any,
+  type: any,
+  delay: any,
+  duration: any
+) => ({
+  hidden: {
+    x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
+    y: direction === "up" ? 100 : direction === "down" ? -100 : 0,
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
+
+export const slideIn = (
+  direction?: any,
+  type?: any,
+  delay?: any,
+  duration?: any
+) => ({
+  hidden: {
+    x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+    y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+  },
+  show: {
+    x: 0,
+    y: 0,
+    transition: {
+      type,
+      delay,
+      duration,
+      ease: "easeOut",
+    },
+  },
+});
