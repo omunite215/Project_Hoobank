@@ -45,11 +45,12 @@ const Business = () => (
       className="sectionInfo"
       variants={slideIn("left", "tween", 0.2, 1.5)}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{ once: true }}
     >
       <h2 className="heading2">
-        You do the business, <br className="sm:block hidden" /> we’ll handle the
-        money.
+        You do the business, <br className="sm:block hidden" /> we&#8217;ll
+        handle the money.
       </h2>
       <p className="paragraph max-w-[470px] mt-5">
         With the right credit card, you can improve your financial life by
@@ -66,7 +67,8 @@ const Business = () => (
           key={feature.id}
           variants={fadeIn("left", "spring", index * 0.5, 1)}
           initial="hidden"
-          animate="show"
+          whileInView="show"
+          viewport={{ once: true }}
         >
           <FeatureCard key={feature.id} {...feature} index={index} />
         </motion.div>

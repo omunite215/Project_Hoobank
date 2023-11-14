@@ -8,9 +8,10 @@ const Billing = () => (
   <section id="product" className="sectionReverse">
     <motion.div
       className="sectionImgReverse"
-      variants={slideIn("right", "tween", 0.2, 1.5)}
+      variants={slideIn("left", "tween", 0.2, 1.5)}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{once: true}}
     >
       <Image
         src={bill}
@@ -28,9 +29,10 @@ const Billing = () => (
 
     <motion.div
       className="sectionInfo"
-      variants={slideIn("left", "tween", 0.2, 1.5)}
+      variants={slideIn("right", "tween", 0.2, 1.5)}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{once: true}}
     >
       <h2 className="heading2">
         Easily control your <br className="sm:block hidden" /> billing &

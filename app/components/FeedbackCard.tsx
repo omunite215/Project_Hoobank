@@ -2,17 +2,23 @@
 import { motion } from "framer-motion";
 import { zoomIn } from "../styles/animations";
 import { quotes } from "../../public";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface feedbackCardPropTypes {
   content: string;
   name: string;
   title: string;
-  img: any;
+  img: string | StaticImageData;
 }
 
 const FeedBackCard = ({ content, name, title, img }: feedbackCardPropTypes) => (
-  <motion.div className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card" variants={zoomIn} initial="hidden" animate="show">
+  <motion.div
+    className="flex justify-between flex-col px-10 py-12 rounded-[20px] max-w-[370px] md:mr-10 sm:mr-5 mr-0 my-5 feedback-card"
+    variants={zoomIn}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true }}
+  >
     <Image
       src={quotes}
       alt="quotes"
@@ -25,7 +31,14 @@ const FeedBackCard = ({ content, name, title, img }: feedbackCardPropTypes) => (
       {content}
     </p>
     <div className="flex flex-row">
-      <Image src={img} alt={name} width={48} height={48} className="rounded-full" loading="eager" />
+      <Image
+        src={img}
+        alt={name}
+        width={48}
+        height={48}
+        className="rounded-full"
+        loading="eager"
+      />
       <div className="flex flex-col ml-4">
         <h4 className="font-poppins font-semibold text-[20px] leading-[32px] text-white">
           {name}

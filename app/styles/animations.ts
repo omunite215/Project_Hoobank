@@ -37,10 +37,10 @@ export const zoomIn = {
 };
 
 export const fadeIn = (
-  direction: any,
-  type: any,
-  delay: any,
-  duration: any
+  direction?: string,
+  type?: string,
+  delay?: number,
+  duration?: number
 ) => ({
   hidden: {
     x: direction === "left" ? 100 : direction === "right" ? -100 : 0,
@@ -61,10 +61,10 @@ export const fadeIn = (
 });
 
 export const slideIn = (
-  direction?: any,
-  type?: any,
-  delay?: any,
-  duration?: any
+  direction?: string,
+  type?: string,
+  delay?: number,
+  duration?: number
 ) => ({
   hidden: {
     x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,

@@ -8,9 +8,15 @@ import GetStarted from "./GetStarted";
 const Hero = () => {
   return (
     <section id="home" className="flex md:flex-row flex-col paddingY">
-      <motion.div className="flex-1 flexStart flex-col xl:px-0 sm:px-16 px-6" variants={slideIn("left", "tween", 0.2, 1.5)} initial="hidden" animate="show">
+      <motion.div
+        className="flex-1 flexStart flex-col xl:px-0 sm:px-16 px-6"
+        variants={slideIn("left", "tween", 0.2, 1.5)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
         <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-          <Image src={discount} alt="discount" width={32} height={32}/>
+          <Image src={discount} alt="discount" width={32} height={32} />
           <p className="paragraph ml-2">
             <span className="text-white">20%</span> Discount For{" "}
             <span className="text-white">1 Month</span> Account
@@ -37,8 +43,21 @@ const Hero = () => {
         </p>
       </motion.div>
 
-      <motion.div className="flex-1 flexCenter md:my-0 my-10 relative" variants={slideIn('right', 'tween', 0.2, 1.5)} initial="hidden" animate="show">
-      <Image src={robot} alt="billing" width={0} height={0} className="w-[100%] h-[100%] relative z-[5]" loading="eager"/>
+      <motion.div
+        className="flex-1 flexCenter md:my-0 my-10 relative"
+        variants={slideIn("right", "tween", 0.2, 1.5)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <Image
+          src={robot}
+          alt="billing"
+          width={0}
+          height={0}
+          className="w-[100%] h-[100%] relative z-[5]"
+          loading="eager"
+        />
 
         {/* gradient start */}
         <div className="absolute z-[0] w-[40%] h-[35%] top-0 pink__gradient" />

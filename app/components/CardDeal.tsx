@@ -9,9 +9,10 @@ const CardDeal = () => (
   <section className="section">
     <motion.div
       className="sectionInfo"
-      variants={slideIn("right", "tween", 0.2, 1.5)}
+      variants={slideIn("left", "tween", 0.2, 1.5)}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{once: true}}
     >
       <h2 className="heading2">
         Find a better card deal <br className="sm:block hidden" /> in few easy
@@ -27,9 +28,10 @@ const CardDeal = () => (
 
     <motion.div
       className="sectionImg"
-      variants={slideIn("left", "tween", 0.2, 1.5)}
+      variants={slideIn("right", "tween", 0.2, 1.5)}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{once: true}}
     >
       <Image
         src={card}

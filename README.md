@@ -18,7 +18,7 @@ This was my first project using Vite. Initially made using tutorial of [JavaScip
 
 A website which is a product page of a Bank displaying its products features, clients , feedbacks and many more.
 
-### The project is hosted on Netlify : [Hoobank](https://hoobankbyom.netlify.app/)
+### The project is hosted on Vercel : [Hoobank](https://hoobank-alpha-nine.vercel.app/)
 
 ## :star: Give A Star
 
@@ -61,11 +61,11 @@ The website should now be up and running on http://localhost:3000.
 
 ## 🏠 Built With:
 
-[![My Skills](https://skillicons.dev/icons?i=react,tailwind,nextjs,netlify)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind,nextjs,vscode,vercel)](https://skillicons.dev)
 
 ## 🛠 Skills
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,figma)](https://skillicons.dev)
 
 ## 🚀 About Me
 Specializations:

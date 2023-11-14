@@ -11,7 +11,13 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <motion.nav className="w-full flex py-6 justify-between items-center navbar" variants={navVariants} initial="hidden" animate="show">
+    <motion.nav
+      className="w-full flex py-6 justify-between items-center navbar"
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
       <Image src={logo} alt="hoobank" width={124} height={32} loading="eager" />
 
       <ul className="list-none sm:flex hidden justify-end items-center flex-1">
