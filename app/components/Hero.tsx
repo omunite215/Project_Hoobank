@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section id="home" className="flex md:flex-row flex-col paddingY">
       <motion.div
-        className="flex-1 flexStart flex-col xl:px-0 sm:px-16 px-6"
+        className="flex-1 flexStart flex-col xl:px-0 paddingX"
         variants={slideIn("left", "tween", 0.2, 1.5)}
         initial="hidden"
         whileInView="show"

@@ -12,7 +12,7 @@ const CardDeal = () => (
       variants={slideIn("left", "tween", 0.2, 1.5)}
       initial="hidden"
       whileInView="show"
-      viewport={{once: true}}
+      viewport={{ once: true }}
     >
       <h2 className="heading2">
         Find a better card deal <br className="sm:block hidden" /> in few easy
@@ -31,7 +31,7 @@ const CardDeal = () => (
       variants={slideIn("right", "tween", 0.2, 1.5)}
       initial="hidden"
       whileInView="show"
-      viewport={{once: true}}
+      viewport={{ once: true }}
     >
       <Image
         src={card}

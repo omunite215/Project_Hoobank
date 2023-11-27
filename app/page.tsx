@@ -14,18 +14,18 @@ import {
 export default function Home() {
   return (
     <main className=" bg-primary w-full overflow-hidden font-poppins">
-      <header className="sm:px-16 px-6 flex justify-center items-center">
-        <nav className="xl:max-w-[1280px] w-full">
+      <header className="paddingX flexCenter">
+        <nav className="boxWidth">
           <Navbar />
         </nav>
       </header>
-      <div className=" bg-primary flex justify-center items-start">
-        <div className="xl:max-w-[1280px] w-full">
+      <section className=" bg-primary flexStart">
+        <section className="boxWidth">
           <Hero />
-        </div>
-      </div>
-      <div className=" bg-primary sm:px-16 px-6 flex justify-center items-start">
-        <div className="xl:max-w-[1280px] w-full">
+        </section>
+      </section>
+      <section className=" bg-primary paddingX flexStart">
+        <section className="boxWidth">
           <Stats />
           <Business />
           <Billing />
@@ -34,8 +34,8 @@ export default function Home() {
           <Clients />
           <CTA />
           <Footer />
-        </div>
-      </div>
+        </section>
+      </section>
     </main>
   );
 }

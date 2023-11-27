@@ -1,4 +1,3 @@
-import { Providers } from "./providers";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./styles/globals.css";
@@ -21,9 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-serif`}>
-        <Providers>{children}</Providers>
-      </body>
+      <body className={`${poppins.variable} font-serif`}>{children}</body>
     </html>
   );
 }

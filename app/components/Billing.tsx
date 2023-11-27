@@ -11,7 +11,7 @@ const Billing = () => (
       variants={slideIn("left", "tween", 0.2, 1.5)}
       initial="hidden"
       whileInView="show"
-      viewport={{once: true}}
+      viewport={{ once: true }}
     >
       <Image
         src={bill}
@@ -32,7 +32,7 @@ const Billing = () => (
       variants={slideIn("right", "tween", 0.2, 1.5)}
       initial="hidden"
       whileInView="show"
-      viewport={{once: true}}
+      viewport={{ once: true }}
     >
       <h2 className="heading2">
         Easily control your <br className="sm:block hidden" /> billing &

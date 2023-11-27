@@ -1,10 +1,16 @@
-# HooBank-A Modern UI/UX Landing Page using React.JS (TypeScript) and Tailwind
+# HooBank-A Modern UI/UX Landing Page using Next.JS and TailwindCSS
 
 ![Screenshot 2023-08-11 213008](https://github.com/omunite215/Hoobank/assets/78680563/e33352b1-ff79-49e7-a9e1-4eaf995ce2c6)
 
 
 
 This was my first project using Vite. Initially made using tutorial of [JavaScipt Mastery](https://youtu.be/_oO4Qi5aVZs?si=uIWyu_1FoElOJueH). Now it is made on next js using typescript.
+Features added other than Tutorial:-
+- Upgraded from Node.JS to Bun.JS (A Faster JavaScript Runtime).
+- Upgraded from JavaScript to TypeScript.
+- Upgraded from React.JS to Next.JS.
+- Added Fluid Animations using Framer-Motion.
+- Removed unused CSS and Optimized Code.
 
 ### Link to Figma File:
 
@@ -39,13 +45,13 @@ Before you start, make sure you have the following software installed on your co
 1. Clone the repository to your local machine
 
 ```bash
-  git clone https://github.com/omunite215/hoobank.git
+  git clone https://github.com/omunite215/Project_Hoobank.git
 
 ```
 2. Navigate to the project directory
 
 ```bash
-  cd hoobank
+  cd Project_Hoobank
 ```
 3. Install the necessary dependencies
 ```bash
@@ -107,12 +113,6 @@ Specializations:
     </a>
   </a>
 </p>
-
-## Acknowledgements
-- [TypeScript Docs](https://www.typescriptlang.org/)
-- [Tailwind Docs](https://tailwindcss.com/docs/installation)
-- [React Docs](https://react.dev/)
-
 
 <p align="center">
   <img src="https://github.com/omunite215/Hoobank/assets/78680563/30e4f274-a9ac-49cc-99a7-ee657aa9b9ee" alt="Om's Logo Image"/>

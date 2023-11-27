@@ -14,11 +14,11 @@ interface featureCardProps {
 
 const FeatureCard = ({ icon, title, content, index }: featureCardProps) => (
   <div
-    className={`flex flex-row p-6 rounded-[20px] ${
+    className={`flex p-6 rounded-[20px] ${
       index !== features.length - 1 ? "mb-6" : "mb-0"
     } feature-card`}
   >
-    <div className="w-[64px] h-[64px] rounded-full flex justify-center items-center bg-dimBlue">
+    <div className="w-[64px] h-[64px] rounded-full flexCenter bg-dimBlue">
       <Image
         src={icon}
         alt="icon"

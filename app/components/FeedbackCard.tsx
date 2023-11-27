@@ -30,7 +30,7 @@ const FeedBackCard = ({ content, name, title, img }: feedbackCardPropTypes) => (
     <p className="font-poppins font-normal text-[18px] leading-[32px] text-white my-10">
       {content}
     </p>
-    <div className="flex flex-row">
+    <div className="flex">
       <Image
         src={img}
         alt={name}
