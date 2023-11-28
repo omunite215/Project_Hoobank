@@ -40,7 +40,7 @@ const Navbar = () => {
           alt="menu"
           width={28}
           height={28}
-          loading="eager"
+          priority={true}
           className="object-contain"
           onClick={() => setToggle(!toggle)}
         />

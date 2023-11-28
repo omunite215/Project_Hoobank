@@ -11,7 +11,7 @@ const Footer = () => (
           alt="hoobank"
           width={266}
           height={72.14}
-          loading="eager"
+          priority={true}
           className="object-contain"
         />
         <p className="paragraph mt-4 max-w-[312px]">
@@ -25,14 +25,14 @@ const Footer = () => (
             key={footerlink.title}
             className={`flex flex-col ss:my-0 my-4 min-w-[150px]`}
           >
-            <h4 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
+            <h1 className="font-poppins font-medium text-[18px] leading-[27px] text-white">
               {footerlink.title}
-            </h4>
+            </h1>
             <ul className="list-none mt-4">
               {footerlink.links.map((link, index) => (
                 <li
                   key={link.name}
-                  className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary cursor-pointer ${
+                  className={`font-poppins font-normal text-[16px] leading-[24px] text-dimWhite hover:text-secondary transition-colors delay-150 cursor-pointer ${
                     index !== footerlink.links.length - 1 ? "mb-4" : "mb-0"
                   }`}
                 >
@@ -58,8 +58,8 @@ const Footer = () => (
             alt={social.id}
             width={21}
             height={21}
-            loading="eager"
-            className={`object-contain cursor-pointer ${
+            priority={true}
+            className={`object-contain cursor-pointer hover:opacity-75 ${
               index !== socialMedia.length - 1 ? "mr-6" : "mr-0"
             }`}
           />

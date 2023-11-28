@@ -16,7 +16,7 @@ const Hero = () => {
         viewport={{ once: true }}
       >
         <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-          <Image src={discount} alt="discount" width={32} height={32} />
+          <Image src={discount} alt="discount" width={32} height={32} priority={true} />
           <p className="paragraph ml-2">
             <span className="text-white">20%</span> Discount For{" "}
             <span className="text-white">1 Month</span> Account
@@ -55,8 +55,8 @@ const Hero = () => {
           alt="billing"
           width={0}
           height={0}
-          className="w-[100%] h-[100%] relative z-[5]"
-          loading="eager"
+          className="sm:w-[100%] w-[90%] sm:h-[100%] h-[90%] relative z-[5]"
+          priority={true}
         />
 
         {/* gradient start */}
